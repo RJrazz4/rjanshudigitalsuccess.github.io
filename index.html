@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJAnshuDigitalSuccess.com - Your Path to Digital Success</title>
+    <!-- Tailwind CSS CDN for easy and responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for overall look and feel, ensuring mobile responsiveness */
+        body {
+            font-family: 'Inter', sans-serif; /* Modern font */
+            background-color: #f0f4f8; /* Light blue-gray background */
+            color: #333; /* Dark gray text */
+            line-height: 1.6; /* Improved readability */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 900px; /* Max width for content */
+            margin: 2rem auto; /* Center alignment with vertical margin */
+            padding: 2.5rem; /* Ample padding */
+            background-color: #ffffff; /* White background for content */
+            border-radius: 25px; /* Rounded corners for a modern look */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18); /* Soft, deep shadow */
+            border: 1px solid #e2e8f0; /* Subtle border */
+        }
+        h1 {
+            font-size: 3.2rem; /* Large, prominent title */
+            font-weight: 800; /* Extra bold */
+            text-align: center; /* Centered title */
+            line-height: 1.2; /* Tight line height for impact */
+            background: linear-gradient(45deg, #4299e1, #805ad5); /* Blue to Purple gradient */
+            -webkit-background-clip: text; /* Clip background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            margin-bottom: 1rem; /* Space below title */
+        }
+        h2 {
+            color: #2d3748; /* Darker gray for section titles */
+            font-size: 2.4rem; /* Large section titles */
+            border-bottom: 3px solid #cbd5e0; /* Underline effect */
+            padding-bottom: 1rem; /* Padding below underline */
+            margin-top: 3rem; /* Space above section title */
+            margin-bottom: 2rem; /* Space below section title */
+            font-weight: 700; /* Bold */
+            text-align: center; /* Centered */
+        }
+        h3 {
+            color: #4a5568; /* Medium gray for sub-titles */
+            font-size: 1.8rem; /* Sub-title size */
+            margin-bottom: 1rem; /* Space below sub-title */
+            display: flex; /* Flexbox for icon and text alignment */
+            align-items: center; /* Vertically align items */
+            gap: 0.8rem; /* Space between icon and text */
+            font-weight: 600; /* Semi-bold */
+            text-align: left; /* Left aligned */
+        }
+        p {
+            margin-bottom: 1rem; /* Space below paragraphs */
+            font-size: 1.05rem; /* Slightly larger text for readability */
+        }
+        ul {
+            list-style: none; /* Remove default list bullets */
+            padding-left: 0; /* Remove default left padding */
+            margin-bottom: 1.5rem; /* Space below lists */
+        }
+        ul li {
+            position: relative; /* For custom bullet positioning */
+            padding-left: 1.8rem; /* Space for custom bullet */
+            margin-bottom: 0.75rem; /* Space between list items */
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        ul li::before {
+            content: '✅'; /* Custom checkmark bullet */
+            position: absolute; /* Position custom bullet */
+            left: 0; /* Align to left */
+            color: #48bb78; /* Green color for checkmark */
+            font-size: 1.2rem;
+        }
+        .ebook-card {
+            background-color: #f7fafc; /* Lightest gray background for cards */
+            border-radius: 18px; /* Slightly more rounded corners */
+            padding: 2rem; /* Padding inside cards */
+            margin-bottom: 2.5rem; /* Space between cards */
+            border: 1px solid #e2e8f0; /* Subtle border for cards */
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center horizontally */
+            text-align: center; /* Center text */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        }
+        .ebook-card:hover {
+            transform: translateY(-8px); /* Lift on hover */
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+        }
+        .ebook-card .svg-wrapper {
+            width: 100%;
+            max-width: 180px; /* Max width for SVG wrapper */
+            height: auto;
+            margin-bottom: 1.5rem; /* Space below SVG */
+            background-color: #ffffff; /* White background for SVG wrapper */
+            border-radius: 16px; /* Rounded corners for SVG wrapper */
+            padding: 15px; /* Padding inside SVG wrapper */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for SVG wrapper */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ebook-card .svg-wrapper svg {
+            width: 100%;
+            height: auto;
+            max-height: 150px; /* Max height for SVG */
+        }
+        .buy-button {
+            background: linear-gradient(90deg, #48bb78, #38a169); /* Green gradient */
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            text-decoration: none; /* Remove underline for links */
+            display: inline-block; /* Allow padding and margin */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .buy-button:hover {
+            background: linear-gradient(90deg, #38a169, #2f855a);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .call-to-action-main {
+            background: linear-gradient(90deg, #4299e1, #805ad5); /* Blue to Purple gradient */
+            color: white;
+            padding: 1.5rem 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: block; /* Make it a block element */
+            text-decoration: none; /* Remove underline for links */
+        }
+        .call-to-action-main:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        .lang-toggle-btn {
+            background-color: #63b3ed; /* Light blue */
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: block; /* Ensure it takes full width or centers */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .lang-toggle-btn:hover {
+            background-color: #4299e1; /* Darker blue on hover */
+        }
+        .content-hinglish {
+            display: block; /* Hinglish is default */
+        }
+        .content-english {
+            display: none; /* English is hidden by default */
+        }
+        .contact-info {
+            background-color: #fff9e6; /* Light yellow background */
+            border-left: 6px solid #f6ad55; /* Orange border */
+            padding: 1.8rem;
+            border-radius: 16px;
+            margin-top: 3rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #b7791f;
+            text-align: center;
+        }
+        .contact-info a {
+            color: #b7791f;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        .note-section {
+            background-color: #fef2f2; /* Light red background */
+            border-left: 6px solid #ef4444; /* Red border */
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #b91c1c;
+            text-align: left;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem auto;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            p, ul li, .buy-button {
+                font-size: 0.95rem;
+            }
+            .ebook-card {
+                padding: 1.5rem;
+            }
+            .ebook-card .svg-wrapper {
+                max-width: 150px;
+            }
+            .call-to-action-main {
+                font-size: 1.2rem;
+                padding: 1rem 1.5rem;
+            }
+            .lang-toggle-btn {
+                font-size: 0.8rem;
+                padding: 0.5rem 1rem;
+            }
+            .contact-info {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Header and Introduction -->
+        <div id="main-overview-content">
+            <h1 class="content-hinglish">RJAnshuDigitalSuccess.com: Aapki Digital Safalta Ka Marg!</h1>
+            <h1 class="content-english" style="display: none;">RJAnshuDigitalSuccess.com: Your Path to Digital Success!</h1>
+
+            <p class="content-hinglish text-gray-700 mb-8 text-lg text-center">
+                Kya aap 2025 aur aane wale samay ke liye khud ko puri tarah se taiyar karna chahte hain? Do you want to achieve extraordinary success in your personal and professional life? Toh yeh **"Top 7 Ebook Bundle"** sirf aapke liye hai! Humne aapke liye 7 aisi powerful e-books taiyar ki hain, jo aaj ki sabse zaroori skills aur knowledge ko cover karti hain. Yeh e-books aapko sirf information nahi dengi, balki aapko action lene aur apni zindagi badalne ke liye inspire karengi. *Yeh bundle aapki safalta ki guarantee hai!*
+            </p>
+            <p class="content-english text-gray-700 mb-8 text-lg text-center" style="display: none;">
+                Do you want to fully prepare yourself for 2025 and beyond? Do you want to achieve extraordinary success in your personal and professional life? Then this **"Top 7 Ebook Bundle"** is just for you! We have prepared 7 powerful e-books that cover today's most essential skills and knowledge. These e-books will not only give you information but will also inspire you to take action and transform your life. This bundle is your guarantee of success!
+            </p>
+            <button class="lang-toggle-btn" onclick="toggleLanguage('main-overview-content', this)">Read in English</button>
+        </div>
+
+        <!-- Section for Ebook Highlights -->
+        <h2 class="content-hinglish">Is Bundle Mein Aapko Kya Milega? (Har E-book Ki Khasiyat):</h2>
+        <h2 class="content-english" style="display: none;">What Will You Get in This Bundle? (Highlights of Each E-book):</h2>
+
+        <!-- JavaScript for SVG drawings and dynamic content generation -->
+        <script>
+            // Helper function to create SVG icon HTML
+            function createSvgIcon(svgContent, viewBox = "0 0 100 100") {
+                return `<div class="svg-wrapper"><svg viewBox="${viewBox}" preserveAspectRatio="xMidYMid meet">${svgContent}</svg></div>`;
+            }
+
+            // Data for each of the 7 E-books
+            const ebookDetails = [
+                {
+                    title: "AI Revolution: Empower Your Life and Business with AI!",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#e0f2fe" rx="10"/>
+                        <circle cx="50" cy="40" r="30" fill="#4299e1"/>
+                        <path d="M40 35 Q 45 30, 50 35 Q 55 30, 60 35" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <circle cx="42" cy="45" r="3" fill="#ffffff"/>
+                        <circle cx="58" cy="45" r="3" fill="#ffffff"/>
+                        <path d="M40 55 Q 50 65, 60 55" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <text x="50" y="85" font-family="Arial" font-size="12" fill="#2b6cb0" text-anchor="middle" font-weight="bold">AI POWER</text>
+                    `),
+                    description_hinglish: "AI ab sirf bhavishya nahi, balki vartaman hai. Yeh e-book aapko AI ke basics se lekar ChatGPT, Midjourney jaise tools ka practical istemal sikhaegi, taaki aap apni daily life aur business ko AI se smart bana saken. *AI ki duniya ko saral banayein, samay bachayein, aur apni creativity badhayein.*",
+                    description_english: "AI is no longer just the future, but the present. This e-book will teach you AI basics and practical uses of tools like ChatGPT, Midjourney, so you can make your daily life and business smart with AI. Simplify the world of AI, save time, and boost your creativity.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                },
+                {
+                    title: "Digital Marketing Mastery for Beginners",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#d1fae5" rx="10"/>
+                        <path d="M15 80 L35 50 L55 70 L75 30 L85 50" fill="none" stroke="#38a169" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="85" cy="50" r="8" fill="#38a169"/>
+                        <text x="50" y="90" font-family="Arial" font-size="12" fill="#2f855a" text-anchor="middle" font-weight="bold">GROW ONLINE</text>
+                    `),
+                    description_hinglish: "Online duniya mein apni pehchan banana ya business badhana chahte hain? Yeh e-book aapko SEO, Social Media Marketing, Content Marketing, Email Marketing aur Paid Advertising ki gehri samajh degi. *Apni brand ko online chamkayein, zyada grahakon tak pahunchein, aur apni bikri badhayein.*",
+                    description_english: "Want to establish your presence or grow your business online? This e-book will give you a deep understanding of SEO, Social Media Marketing, Content Marketing, Email Marketing, and Paid Advertising. Shine your brand online, reach more customers, and boost your sales.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                },
+                {
+                    title: "Financial Freedom Blueprint: Your Guide to Smart Money Management",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#fffbe0" rx="10"/>
+                        <rect x="20" y="30" width="60" height="40" rx="8" fill="#f6ad55"/>
+                        <text x="50" y="55" font-family="Arial" font-size="25" fill="#ffffff" text-anchor="middle" font-weight="bold">$</text>
+                        <text x="50" y="90" font-family="Arial" font-size="12" fill="#b7791f" text-anchor="middle" font-weight="bold">MONEY SMART</text>
+                    `),
+                    description_hinglish: "Paiso ki chinta kise nahi hoti? Yeh e-book aapko Budgeting, Saving, Investing, Debt Management aur Income Streams ke baare mein sikhaegi, taaki aap Financial Freedom pa saken. *Apne paison ko smartly manage karein, bhavishya surakshit karein, aur aarthik azaadi payein.*",
+                    description_english: "Who doesn't worry about money? This e-book will teach you about Budgeting, Saving, Investing, Debt Management, and Income Streams, so you can achieve Financial Freedom. Manage your money smartly, secure your future, and gain financial independence.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                },
+                {
+                    title: "Personal Branding: Build Your Unique Identity Online & Offline",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#fefcbf" rx="10"/>
+                        <circle cx="50" cy="40" r="30" fill="#ecc94b"/>
+                        <path d="M40 35 Q 45 30, 50 35 Q 55 30, 60 35" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <circle cx="42" cy="45" r="3" fill="#ffffff"/>
+                        <circle cx="58" cy="45" r="3" fill="#ffffff"/>
+                        <path d="M40 55 Q 50 65, 60 55" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <text x="50" y="85" font-family="Arial" font-size="12" fill="#975a16" text-anchor="middle" font-weight="bold">YOUR BRAND</text>
+                    `),
+                    description_hinglish: "Aaj ki bheed mein apni alag pehchan banana chahte hain? Yeh e-book aapko apni unique identity pehchanne, online aur offline ek mazboot brand banane, aur networking skills ko behtar banane mein madad karegi. *Apni pratishtha banayein, naye avasar payein, aur apni pehchan ko mazboot karein.*",
+                    description_english: "Want to create your unique identity in today's crowd? This e-book will help you identify your unique identity, build a strong brand online and offline, and improve your networking skills. Build your reputation, find new opportunities, and strengthen your identity.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                },
+                {
+                    title: "Mindfulness & Stress Management: Find Calm in a Hectic World",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#e6fffa" rx="10"/>
+                        <circle cx="50" cy="40" r="30" fill="#319795"/>
+                        <path d="M50 25 C 65 25, 75 35, 75 50 C 75 65, 65 75, 50 75 C 35 75, 25 65, 25 50 C 25 35, 35 25, 50 25 Z" fill="#4fd1c5" opacity="0.8"/>
+                        <circle cx="50" cy="50" r="10" fill="#ffffff"/>
+                        <text x="50" y="55" font-family="Arial" font-size="12" fill="#319795" text-anchor="middle" font-weight="bold">ZEN</text>
+                        <text x="50" y="90" font-family="Arial" font-size="10" fill="#2d3748" text-anchor="middle" font-weight="bold">INNER PEACE</text>
+                    `),
+                    description_hinglish: "Tez-tarraar duniya mein stress ek badi chunauti hai. Yeh e-book aapko Mindfulness practices, Breathing exercises aur Stress kam karne ki aadatein sikhaegi, taaki aap shant aur khush reh saken. *Mansik shanti payein, chinta kam karein, aur apni mental well-being ka dhyaan rakhein.*",
+                    description_english: "Stress is a major challenge in today's fast-paced world. This e-book will teach you Mindfulness practices, Breathing exercises, and habits to reduce stress, so you can stay calm and happy. Find mental peace, reduce anxiety, and take care of your mental well-being.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                },
+                {
+                    title: "Effective Communication Skills: Speak, Listen, and Connect Better",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#ebf8ff" rx="10"/>
+                        <path d="M20 40 Q 20 20, 50 20 Q 80 20, 80 40 L 80 70 Q 80 80, 70 80 L 30 80 Q 20 80, 20 70 Z" fill="#63b3ed"/>
+                        <path d="M80 40 Q 80 20, 50 20 Q 20 20, 20 40 L 20 70 Q 20 80, 30 80 L 70 80 Q 80 80, 80 70 Z" fill="#4299e1" opacity="0.7"/>
+                        <text x="50" y="55" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">TALK</text>
+                        <text x="50" y="90" font-family="Arial" font-size="10" fill="#2b6cb0" text-anchor="middle" font-weight="bold">CONNECT</text>
+                    `),
+                    description_hinglish: "Behtar baatcheet har rishte aur career ki kunji hai. Yeh e-book aapko spasht roop se bolna, sakriya roop se sunna, non-verbal communication ko samajhna aur prabhavi dhang se connect karna sikhaegi. *Apne rishton ko mazboot karein, professional life mein aage badhein, aur apni baat ko prabhavi dhang se rakhein.*",
+                    description_english: "Better communication is the key to every relationship and career. This e-book will teach you how to speak clearly, listen actively, understand non-verbal communication, and connect effectively. Strengthen your relationships, advance in your professional life, and express yourself effectively.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                },
+                {
+                    title: "E-commerce Launchpad: Start Your Online Store from Scratch",
+                    icon: createSvgIcon(`
+                        <rect x="0" y="0" width="100" height="100" fill="#ffe0b2" rx="10"/>
+                        <rect x="20" y="30" width="60" height="40" rx="8" fill="#f6ad55"/>
+                        <path d="M25 35 L75 35 L75 65 L25 65 Z" fill="#ffffff"/>
+                        <text x="50" y="50" font-family="Arial" font-size="18" fill="#f6ad55" text-anchor="middle" font-weight="bold">SHOP</text>
+                        <text x="50" y="90" font-family="Arial" font-size="10" fill="#b7791f" text-anchor="middle" font-weight="bold">SELL ONLINE</text>
+                    `),
+                    description_hinglish: "Apna online business shuru karne ka sapna hai? Yeh e-book aapko Product chunne, E-commerce platform set karne, Product listing, Marketing, Order fulfillment aur business ko scale karne ke baare mein step-by-step guidance degi. *Apna online store aasani se launch karein, duniya bhar mein bechein, aur apne udyami sapnon ko pura karein.*",
+                    description_english: "Dreaming of starting your own online business? This e-book will give you step-by-step guidance on Product selection, E-commerce platform setup, Product listing, Marketing, Order fulfillment, and scaling your business. Easily launch your online store, sell worldwide, and fulfill your entrepreneurial dreams.",
+                    buy_link: "#" // Placeholder, will be replaced with Gumroad link
+                }
+            ];
+
+            // Function to toggle language for a specific content block
+            function toggleLanguage(contentBlockId, button) {
+                const contentBlock = document.getElementById(contentBlockId);
+                const hinglishElements = contentBlock.querySelectorAll('.content-hinglish');
+                const englishElements = contentBlock.querySelectorAll('.content-english');
+
+                // Check the current state based on the first Hinglish element's display style
+                const isHinglishVisible = hinglishElements.length > 0 && hinglishElements[0].style.display !== 'none';
+
+                if (isHinglishVisible) {
+                    // Currently showing Hinglish, switch to English
+                    hinglishElements.forEach(el => el.style.display = 'none');
+                    englishElements.forEach(el => el.style.display = 'block');
+                    button.textContent = 'Read in Hinglish';
+                } else {
+                    // Currently showing English, switch to Hinglish
+                    hinglishElements.forEach(el => el.style.display = 'block');
+                    englishElements.forEach(el => el.style.display = 'none');
+                    button.textContent = 'Read in English';
+                }
+            }
+
+            // DOMContentLoaded ensures the script runs after the HTML is fully loaded
+            document.addEventListener('DOMContentLoaded', () => {
+                const mainContainer = document.querySelector('.container');
+
+                // Dynamically create and append each E-book card
+                ebookDetails.forEach((detail, index) => {
+                    const ebookCard = document.createElement('div');
+                    ebookCard.className = 'ebook-card';
+                    ebookCard.innerHTML = `
+                        <h3>${detail.title}</h3>
+                        ${detail.icon}
+                        <div id="ebook-desc-${index}-content">
+                            <p class="content-hinglish">${detail.description_hinglish}</p>
+                            <p class="content-english" style="display: none;">${detail.description_english}</p>
+                        </div>
+                        <button class="lang-toggle-btn" onclick="toggleLanguage('ebook-desc-${index}-content', this)">Read in English</button>
+                        <a href="${detail.buy_link}" target="_blank" class="buy-button">Buy Now</a>
+                    `;
+                    mainContainer.appendChild(ebookCard);
+                });
+            });
+        </script>
+
+        <!-- Section: Why Buy This Bundle? -->
+        <h2 class="content-hinglish">Yeh Bundle Aapko Kyun Kharidna Chahiye? (Amazing Value!)</h2>
+        <h2 class="content-english" style="display: none;">Why Should You Buy This Bundle? (Amazing Value!)</h2>
+
+        <div id="why-buy-content">
+            <ul class="content-hinglish">
+                <li>**Bhavishya Ke Liye Taiyar:** Yeh sabhi topics 2025 aur aane wale dashakon mein sabse zyada demand mein rahenge. Aap khud ko in-demand skills se less karenge.</li>
+                <li>**Vyapak Gyan:** Ek hi bundle mein aapko AI, Digital Marketing, Finance, Personal Branding, Well-being, Communication aur E-commerce jaise mahatvapurna kshetron ka pura gyan milega.</li>
+                <li>**Practical aur Action-Oriented:** Yeh sirf theory nahi hai! Har e-book mein aapko turant lagu karne yogya practical tips aur strategies milengi.</li>
+                <li>**Dual-Language Support:** Har e-book mein Hinglish aur English dono bhashaon mein content uplabdh hai, jisse aap apni pasand ki bhasha mein seekh sakte hain.</li>
+                <li>**Akarshak Visuals:** Har e-book mein unique aur akarshak SVG visuals hain jo concepts ko samajhna aasan banate hain aur padhne ka anubhav behtar banate hain.</li>
+                <li>**Avishwasniya Moolya:** 7 premium e-books ka yeh bundle aapko alag-alag kharidne ki tulna mein bahut zyada value dega.</li>
+            </ul>
+            <ul class="content-english" style="display: none;">
+                <li>**Future-Ready:** All these topics will be in highest demand in 2025 and coming decades. You will equip yourself with in-demand skills.</li>
+                <li>**Comprehensive Knowledge:** In a single bundle, you will get complete knowledge of important areas like AI, Digital Marketing, Finance, Personal Branding, Well-being, Communication, and E-commerce.</li>
+                <li>**Practical and Action-Oriented:** This is not just theory! Each e-book provides practical tips and strategies that you can implement immediately.</li>
+                <li>**Dual-Language Support:** Content is available in both Hinglish and English in every e-book, allowing you to learn in your preferred language.</li>
+                <li>**Attractive Visuals:** Each e-book features unique and attractive SVG visuals that make concepts easier to understand and enhance the reading experience.</li>
+                <li>**Incredible Value:** This bundle of 7 premium e-books offers significantly more value compared to buying them individually.</li>
+            </ul>
+            <button class="lang-toggle-btn" onclick="toggleLanguage('why-buy-content', this)">Read in English</button>
+        </div>
+
+        <!-- Main Call to Action -->
+        <div id="call-to-action-content">
+            <a href="#" target="_blank" class="content-hinglish call-to-action-main">
+                **Abhi Kharidein aur Apni Safalta Ki Yatra Shuru Karein!** Yeh bundle sirf ek investment nahi, balki aapke ujjwal bhavishya ki kunji hai.
+            </a>
+            <a href="#" target="_blank" class="content-english call-to-action-main" style="display: none;">
+                **Buy Now and Start Your Journey to Success!** This bundle is not just an investment, but the key to your bright future.
+            </a>
+            <button class="lang-toggle-btn" onclick="toggleLanguage('call-to-action-content', this)">Read in English</button>
+        </div>
+
+        <!-- Contact Information -->
+        <div id="contact-info-content" class="contact-info">
+            <p class="content-hinglish">
+                **Aur zyada jankari ke liye, humse sampark karein:**<br>
+                📞 <a href="tel:+917205191890">7205191890</a><br>
+                📞 <a href="tel:+919369222691">9369222691</a>
+            </p>
+            <p class="content-english" style="display: none;">
+                **For more information, please contact us:**<br>
+                📞 <a href="tel:+917205191890">7205191890</a><br>
+                📞 <a href="tel:+919369222691">9369222691</a>
+            </p>
+            <button class="lang-toggle-btn" onclick="toggleLanguage('contact-info-content', this)">Read in English</button>
+        </div>
+
+        <!-- Important Note for Zero-Investment Selling -->
+        <div class="note-section">
+            <p class="content-hinglish">
+                **ज़रूरी नोट: ज़ीरो इन्वेस्टमेंट में बिक्री और डाउनलोड के लिए:**<br>
+                अपनी e-books को सीधे इस वेबसाइट से बेचने और सुरक्षित डाउनलोड देने के लिए, आपको एक **फ्री थर्ड-पार्टी सेवा (जैसे Gumroad)** का उपयोग करना होगा। आप Gumroad पर अपना फ्री अकाउंट बनाकर हर e-book को एक प्रोडक्ट के रूप में अपलोड कर सकते हैं। फिर, इस वेबसाइट पर मौजूद **"Buy Now" बटनों** में उन Gumroad प्रोडक्ट लिंक्स को डाल सकते हैं। Gumroad आपके लिए पेमेंट और सुरक्षित डाउनलोड को संभालेगा, जिससे आपकी वेबसाइट प्रोफेशनल दिखेगी और आपको कोई इन्वेस्टमेंट नहीं करनी पड़ेगी।
+            </p>
+            <p class="content-english" style="display: none;">
+                **Important Note for Zero-Investment Selling & Downloads:**<br>
+                To sell your e-books directly from this website and provide secure downloads without investment, you will need to use a **free third-party service (like Gumroad)**. You can create a free account on Gumroad and upload each e-book as a product there. Then, you can insert the Gumroad product links into the **"Buy Now" buttons** on this website. Gumroad will handle payments and secure downloads for you, making your website look professional without any upfront investment.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
